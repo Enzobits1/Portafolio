@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class NavbarBanner extends StatefulWidget {
@@ -31,19 +32,12 @@ Container navBarMob() {
     height: 100,
     child: Row(
       children: [
-        SizedBox(
-          width: 200,
-          child: Image.asset("assets/developer_logo.png", scale: 2.0),
-        ),
+        Image.asset("assets/developer_logo.png", scale: 1.8),
+        Spacer(flex: 1),
         Container(
-          width: 40,
-          height: 40,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: Colors.blueGrey,
-          ),
-          child: Expanded(
-            child: Icon(Icons.menu, color: Colors.white, size: 30),
+            color: const Color.fromARGB(255, 165, 160, 160),
+            borderRadius: BorderRadius.circular(2.0),
           ),
         ),
       ],
@@ -74,20 +68,10 @@ Container navBarDesk() {
   );
 }
 
-// Helper para los botones del nav
+// Botones del navBarDesk
 Widget navBarItem(String title) {
   return TextButton(
-    onPressed: () {
-      if (title == "Home") {
-        print("Home");
-      } else if (title == "Sobre mí") {
-        print("Sobre mí");
-      } else if (title == "Habilidades") {
-        print("Habilidades");
-      } else if (title == "Proyectos") {
-        print("Proyectos");
-      }
-    },
+    onPressed: () {},
     child: Text(
       title,
       style: TextStyle(fontSize: 16, color: Colors.white, letterSpacing: 1.1),

@@ -1,7 +1,7 @@
 name: portafolio
 description: "Un proyecto Flutter para VS Code."
 
-publish_to: 'none'  # Proyecto privado, no se publicará en pub.dev
+publish_to: 'none'  
 
 version: 1.0.0+1
 

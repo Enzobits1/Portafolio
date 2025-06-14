@@ -7,6 +7,7 @@
       "name": "portafolio",
       "version": "1.0.0+1",
       "dependencies": [
+        "animated_text_kit",
         "cupertino_icons",
         "flutter",
         "google_fonts",
@@ -60,6 +61,14 @@
         "flutter",
         "http",
         "path_provider"
+      ]
+    },
+    {
+      "name": "animated_text_kit",
+      "version": "4.2.3",
+      "dependencies": [
+        "characters",
+        "flutter"
       ]
     },
     {

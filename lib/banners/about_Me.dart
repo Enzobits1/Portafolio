@@ -75,8 +75,13 @@ Column aboutMeMob() {
       Text("Sobre mí", style: TextStyle(fontSize: 32, color: Colors.white)),
       SizedBox(height: 12),
       Text(
-        "Hola! Soy Enzo, actual desarrollador de C++ y Flutter (Rellenar más datos).",
-        style: TextStyle(fontSize: 18, color: Colors.white70),
+        "Hola! Soy Enzo, actual desarrollador de C++ y Flutter, Estudiante de Programación enfocado al Desarrollo Web Frontend. Como Desarrollador busco crear proyectos que brinden la mejor experiencia para el usuario.",
+        style: TextStyle(fontSize: 18, color: Colors.white70, height: 1.5),
+      ),
+      SizedBox(height: 12),
+      Text(
+        "Soy una persona empática y entusiasta, con competencias enfocadas en el trabajo en equipo, comunicación asertiva, resolución de problemas, responsable y proactiva, me gusta aprender de los demás y superarme continuamente.",
+        style: TextStyle(fontSize: 18, color: Colors.white70, height: 1.5),
       ),
       SizedBox(height: 12),
     ],

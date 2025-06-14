@@ -71,13 +71,13 @@ Column proyectMob() {
       const SizedBox(height: 20),
       projectItem(
         "Portafolio",
-        "assets/portafolio.jpg",
+        "assets/portafolio_web.png",
         "https://portafolio-iota-seven-83.vercel.app/",
       ),
       const SizedBox(height: 20),
       projectItem(
         "Web Pizza",
-        "assets/pizza.jpg",
+        "assets/pizzas_web.png",
         "https://pizzas-web.vercel.app/",
       ),
     ],
@@ -114,17 +114,5 @@ Widget projectItem(String title, String imagePath, String url) {
         ],
       ),
     ),
-  );
-}
-
-Container sizeProyectMob() {
-  return Container(
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.all(
-        Radius.circular(30),
-      ), //ajusta el radio del proyecto
-      border: Border.all(color: Colors.white), //
-    ),
-    child: Image.asset("assets/pizzas_web.png", scale: 3.7),
   );
 }

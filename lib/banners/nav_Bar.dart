@@ -16,7 +16,7 @@ class _NavbarBannerState extends State<NavbarBanner> {
 
     return isMobile
         //arrranca navbar mobile
-        ? navBarMob()
+        ? navBarMob(context)
         // termina navbar mobile
         //arranca navbar escritorio
         : navBarDesk();
@@ -24,22 +24,86 @@ class _NavbarBannerState extends State<NavbarBanner> {
 }
 
 //EMPIEZA BARRA DE NAVEGACION MOBILE1
-Container navBarMob() {
+Container navBarMob(BuildContext context) {
   return Container(
-    color: Color.fromARGB(255, 32, 31, 31),
+    color: Colors.transparent,
     width: double.infinity,
     height: 100,
+    padding: EdgeInsets.symmetric(horizontal: 20),
     child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        // Logo a la izquierda
         Image.asset("assets/developer_logo.png", scale: 1.8),
-        Spacer(flex: 1),
-        Container(
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 165, 160, 160),
-            borderRadius: BorderRadius.circular(2.0),
-          ),
+        // Botón de menú
+        Builder(
+          builder: (BuildContext builderContext) {
+            return IconButton(
+              icon: Icon(Icons.menu, color: Colors.white, size: 32),
+              onPressed: () {
+                showDialog(
+                  context: builderContext,
+                  barrierColor: Colors.black54,
+                  builder: (BuildContext dialogContext) {
+                    return Align(
+                      alignment: Alignment.centerRight,
+                      child: Container(
+                        width: MediaQuery.of(context).size.width * 0.7,
+                        height: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Color(0xFF181818),
+                          borderRadius: BorderRadius.horizontal(
+                            left: Radius.circular(20),
+                          ),
+                        ),
+                        padding: EdgeInsets.all(20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Align(
+                              alignment: Alignment.topRight,
+                              child: IconButton(
+                                icon: Icon(Icons.close, color: Colors.white),
+                                onPressed: () {
+                                  Navigator.of(dialogContext).pop();
+                                },
+                              ),
+                            ),
+                            SizedBox(height: 40),
+                            navItem("Home"),
+                            SizedBox(height: 20),
+                            navItem("Sobre mí"),
+                            SizedBox(height: 20),
+                            navItem("Proyectos"),
+                            SizedBox(height: 20),
+                            navItem("Contacto"),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                );
+              },
+            );
+          },
         ),
       ],
+    ),
+  );
+}
+
+Widget navItem(String title) {
+  return GestureDetector(
+    onTap: () {
+      // Aquí agregás el scroll a las secciones
+    },
+    child: Text(
+      title,
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 22,
+        fontWeight: FontWeight.w500,
+      ),
     ),
   );
 }

@@ -8,7 +8,6 @@ import 'package:portafolio/banners/portada.dart';
 import 'package:portafolio/banners/proyectos.dart';
 import 'package:portafolio/banners/whatsapp_Button.dart';
 import 'package:portafolio/footer.dart';
-import 'package:portafolio/globals/menuNavBar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

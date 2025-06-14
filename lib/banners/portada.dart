@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PortadaBanner extends StatefulWidget {
   const PortadaBanner({super.key});
@@ -24,32 +25,40 @@ SizedBox portadaMob() {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Center(child: Image.asset("assets/imagen_sin_fondo.png", scale: 4.0)),
-        SizedBox(height: 5),
+        SizedBox(height: 20),
         Text("Hola!, Soy", style: TextStyle(fontSize: 32, color: Colors.white)),
         Text(
           "Enzo Saavedra Torres",
           style: TextStyle(
             fontSize: 42,
-            color: const Color.fromARGB(190, 255, 255, 255),
+            fontWeight: FontWeight.bold,
+            color: Color.fromARGB(190, 255, 255, 255),
           ),
         ),
+        SizedBox(height: 20),
         OutlinedButton(
-          onPressed: () {
-            Uri.file(
-              "https://drive.google.com/file/d/1IyDEe7h7aK8jW57DYJXrkEUOhz0cKaUw/view",
-            );
+          onPressed: () async {
+            final url =
+                'https://drive.google.com/file/d/1IyDEe7h7aK8jW57DYJXrkEUOhz0cKaUw/view';
+            if (await canLaunchUrl(Uri.parse(url))) {
+              await launchUrl(
+                Uri.parse(url),
+                mode: LaunchMode.externalApplication,
+              );
+            } else {
+              throw 'No se pudo abrir el CV';
+            }
           },
           style: OutlinedButton.styleFrom(
+            side: BorderSide(color: Colors.white70),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(40),
             ),
+            padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
           ),
           child: Text(
             "Descargar CV",
-            style: TextStyle(
-              fontSize: 20,
-              color: Color.fromARGB(255, 100, 100, 100),
-            ),
+            style: TextStyle(fontSize: 20, color: Colors.white70),
           ),
         ),
       ],

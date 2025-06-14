@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProyectosBanner extends StatefulWidget {
   const ProyectosBanner({super.key});
@@ -58,26 +59,61 @@ Container sizeProyectDesk(String imagen) {
 Column proyectMob() {
   return Column(
     children: [
-      Text(
-        "Estudiante de Programacion enfocado al Desarrollo Web Frontend. Como Desarrollador busco crear proyectos que brinden la mejor experiencia para el usuario.",
-        style: TextStyle(fontSize: 18, color: Colors.white70),
-      ),
-      Text("Proyectos", style: TextStyle(fontSize: 32, color: Colors.white)),
-      Container(
-        height: 500,
-        width: double.infinity,
-        color: const Color.fromARGB(87, 0, 0, 0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            sizeProyectMob(),
-            SizedBox(height: 20),
-            sizeProyectMob(),
-            SizedBox(width: 16),
-          ],
+      const SizedBox(height: 30),
+      const Text(
+        'Proyectos',
+        style: TextStyle(
+          fontSize: 28,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
         ),
       ),
+      const SizedBox(height: 20),
+      projectItem(
+        "Portafolio",
+        "assets/portafolio.jpg",
+        "https://portafolio-iota-seven-83.vercel.app/",
+      ),
+      const SizedBox(height: 20),
+      projectItem(
+        "Web Pizza",
+        "assets/pizza.jpg",
+        "https://pizzas-web.vercel.app/",
+      ),
     ],
+  );
+}
+
+Widget projectItem(String title, String imagePath, String url) {
+  return InkWell(
+    onTap: () async {
+      if (await canLaunchUrl(Uri.parse(url))) {
+        launchUrl(Uri.parse(url));
+      }
+    },
+    child: Container(
+      width: double.infinity,
+      margin: EdgeInsets.symmetric(horizontal: 20),
+      decoration: BoxDecoration(
+        color: Color(0xFF1E293B),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Column(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+            child: Image.asset(imagePath),
+          ),
+          Padding(
+            padding: EdgeInsets.all(12),
+            child: Text(
+              title,
+              style: TextStyle(color: Colors.white, fontSize: 22),
+            ),
+          ),
+        ],
+      ),
+    ),
   );
 }
 

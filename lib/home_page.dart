@@ -7,6 +7,7 @@ import 'package:portafolio/banners/nav_Bar.dart';
 import 'package:portafolio/banners/portada.dart';
 import 'package:portafolio/banners/proyectos.dart';
 import 'package:portafolio/banners/whatsapp_Button.dart';
+import 'package:portafolio/footer.dart';
 import 'package:portafolio/globals/menuNavBar.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,7 +19,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool obscuremode = false;
-  bool mostrarMenu = false;
+
   // Bool para el icono oscuro o claro
   @override
   Widget build(BuildContext context) {
@@ -36,11 +37,12 @@ class _HomePageState extends State<HomePage> {
                 ProyectosBanner(),
                 HabilidadesBanner(),
                 SizedBox(height: 12),
+                Footer(),
               ],
             ),
           ),
           Positioned(child: NavbarBanner()),
-          Positioned(bottom: 545, right: 5, child: MenuNavBar()),
+
           Positioned(bottom: 50, right: 20, child: WhatsAppButton()),
           Positioned(bottom: 150, right: 20, child: LinkedinButton()),
           Positioned(bottom: 250, right: 20, child: GithubButton()),

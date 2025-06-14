@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:portafolio/globals/colors.dart';
 import 'package:portafolio/home_page.dart';
 
+
 void main() {
   runApp(const MyApp());
 }

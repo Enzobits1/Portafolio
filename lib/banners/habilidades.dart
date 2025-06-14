@@ -70,9 +70,50 @@ class _HabilidadesBannerState extends State<HabilidadesBanner> {
     );
   }
 
-  Container habilidadesMob() => Container(
-    height: 200,
-    width: double.infinity,
-    color: const Color.fromARGB(255, 20, 20, 20),
+  Column habilidadesMob() => Column(
+    children: [
+      const SizedBox(height: 30),
+      const Text(
+        'Habilidades',
+        style: TextStyle(
+          fontSize: 28,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
+      ),
+      const SizedBox(height: 20),
+      Wrap(
+        spacing: 20,
+        runSpacing: 20,
+        alignment: WrapAlignment.center,
+        children: [
+          skillItem("assets/flutter.png", "Flutter"),
+          skillItem("assets/dart.png", "Dart"),
+          skillItem("assets/git.png", "Git"),
+          skillItem("assets/github.png", "GitHub"),
+          skillItem("assets/canva.png", "Canva"),
+          skillItem("assets/cpp.png", "C++"),
+        ],
+      ),
+    ],
+  );
+}
+
+Widget skillItem(String path, String label) {
+  return Column(
+    children: [
+      Container(
+        width: 60,
+        height: 60,
+        padding: const EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          color: Color(0xFF1E293B),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Image.asset(path),
+      ),
+      const SizedBox(height: 8),
+      Text(label, style: const TextStyle(color: Colors.white)),
+    ],
   );
 }

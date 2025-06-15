@@ -27,8 +27,8 @@ class _GithubButtonState extends State<GithubButton> {
       child: GestureDetector(
         onTap: _launchGithub,
         child: Container(
-          width: 64,
-          height: 64,
+          width: 45,
+          height: 45,
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(githubIcon),

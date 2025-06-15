@@ -27,8 +27,8 @@ class _WhatsAppButtonState extends State<WhatsAppButton> {
       child: GestureDetector(
         onTap: _launchWhatsApp,
         child: Container(
-          width: 64,
-          height: 64,
+          width: 42,
+          height: 42,
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(wspIcon),

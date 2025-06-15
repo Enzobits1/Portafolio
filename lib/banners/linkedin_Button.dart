@@ -27,8 +27,8 @@ class _LinkedinButtonState extends State<LinkedinButton> {
       child: GestureDetector(
         onTap: _launchLinkedin,
         child: Container(
-          width: 64,
-          height: 64,
+          width: 42,
+          height: 42,
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(linkedinIcon),

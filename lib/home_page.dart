@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portafolio/banners/about_Me.dart';
+import 'package:portafolio/banners/contacto.dart';
 import 'package:portafolio/banners/github_Button.dart';
 import 'package:portafolio/banners/habilidades.dart';
 import 'package:portafolio/banners/linkedin_Button.dart';
@@ -36,15 +37,15 @@ class _HomePageState extends State<HomePage> {
                 ProyectosBanner(),
                 HabilidadesBanner(),
                 SizedBox(height: 12),
+                Contactobanner(),
                 Footer(),
               ],
             ),
           ),
           Positioned(child: NavbarBanner()),
-
           Positioned(bottom: 50, right: 20, child: WhatsAppButton()),
+          Positioned(bottom: 100, right: 20, child: GithubButton()),
           Positioned(bottom: 150, right: 20, child: LinkedinButton()),
-          Positioned(bottom: 250, right: 20, child: GithubButton()),
         ],
       ),
     );

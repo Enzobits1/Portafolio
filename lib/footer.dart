@@ -15,21 +15,27 @@ class _FooterState extends State<Footer> {
     bool isMobile = width < 600 ? true : false;
     return isMobile ? footerMob() : footerDesk();
   }
+}
 
-  Widget footerDesk() {
-    return const Padding(
-      padding: EdgeInsets.symmetric(vertical: 20),
-      child: Text(
-        "© 2025 Enzo Saavedra Torres - Todos los derechos reservados",
-        style: TextStyle(color: Colors.white70, fontSize: 12),
-        textAlign: TextAlign.center,
-      ),
-    );
-  }
+Widget footerDesk() {
+  return Container(
+    height: 60,
+    width: double.infinity,
+    color: const Color.fromARGB(101, 46, 41, 41),
+    padding: EdgeInsets.symmetric(vertical: 20),
+    child: Text(
+      "© 2025 Enzo Saavedra Torres - Todos los derechos reservados",
+      style: TextStyle(color: Colors.white70, fontSize: 12),
+      textAlign: TextAlign.center,
+    ),
+  );
 }
 
 Widget footerMob() {
-  return const Padding(
+  return Container(
+    height: 60,
+    width: double.infinity,
+    color: const Color.fromARGB(101, 46, 41, 41),
     padding: EdgeInsets.symmetric(vertical: 20),
     child: Text(
       "© 2025 Enzo Saavedra Torres - Todos los derechos reservados",

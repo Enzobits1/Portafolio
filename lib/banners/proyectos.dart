@@ -59,16 +59,15 @@ Container sizeProyectDesk(String imagen) {
 Column proyectMob() {
   return Column(
     children: [
-      const SizedBox(height: 30),
-      const Text(
+       SizedBox(height: 30),
+       Text(
         'Proyectos',
         style: TextStyle(
           fontSize: 28,
-          fontWeight: FontWeight.bold,
           color: Colors.white,
         ),
       ),
-      const SizedBox(height: 20),
+       SizedBox(height: 20),
       projectItem(
         "Portafolio",
         "assets/portafolio_web.png",

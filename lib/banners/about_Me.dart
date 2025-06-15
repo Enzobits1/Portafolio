@@ -36,7 +36,7 @@ Widget aboutMeDesk() {
           flex: 2,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // Este queda exactamente como lo tenías
               Text(

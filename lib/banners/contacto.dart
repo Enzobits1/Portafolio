@@ -41,7 +41,7 @@ class _ContactobannerState extends State<Contactobanner> {
               _contactButton(
                 icon: Icons.email,
                 label: "Email",
-                onTap: () => _launchUrl("mailto:enzost25@gmail.com"),
+                onTap: () => _launchUrl("https://enzost25@gmail.com"),
               ),
               _contactButton(
                 icon: Icons.person_sharp,
@@ -51,7 +51,10 @@ class _ContactobannerState extends State<Contactobanner> {
               _contactButton(
                 icon: Icons.business_center_sharp,
                 label: "LinkedIn",
-                onTap: () => _launchUrl("https://linkedin.com/in/tuusuario"),
+                onTap:
+                    () => _launchUrl(
+                      "https://www.linkedin.com/in/enzo-saavedra-torres-9aa29b215/",
+                    ),
               ),
             ],
           ),

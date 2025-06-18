@@ -36,7 +36,7 @@ class _HabilidadesBannerState extends State<HabilidadesBanner> {
               children: [
                 itemDesk("assets/c++.png", "C++"),
                 SizedBox(width: 120),
-                itemDesk("assets/canva.png", "Canva"),
+                itemDesk("assets/notion.png", "Notion"),
                 SizedBox(width: 120),
                 itemDesk("assets/flutter.png", "Flutter"),
               ],
@@ -94,7 +94,7 @@ class _HabilidadesBannerState extends State<HabilidadesBanner> {
           itemMob("assets/dart.png", "Dart"),
           itemMob("assets/git.png", "Git"),
           itemMob("assets/github.png", "GitHub"),
-          itemMob("assets/canva.png", "Canva"),
+          itemMob("assets/notion.png", "Notion"),
           itemMob("assets/c++.png", "C++"),
         ],
       ),

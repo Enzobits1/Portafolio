@@ -70,6 +70,7 @@ SizedBox portadaDesk() {
   return SizedBox(
     height: 900,
     child: Container(
+      //usar pading para el texto.
       color: const Color.fromARGB(87, 0, 0, 0),
       child: Row(
         children: [

@@ -76,9 +76,12 @@ Column aboutMeMob() {
     children: [
       Text("Sobre mí", style: TextStyle(fontSize: 32, color: Colors.white)),
       SizedBox(height: 12),
-      Text(
-        "Hola! Soy Enzo, actual desarrollador de C++ y Flutter, Estudiante de Programación enfocado al Desarrollo Web Frontend. Como Desarrollador busco crear proyectos que brinden la mejor experiencia para el usuario.",
-        style: TextStyle(fontSize: 18, color: Colors.white70, height: 1.5),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Text(
+          "Hola! Soy Enzo, actual desarrollador de C++ y Flutter, Estudiante de Programación enfocado al Desarrollo Web Frontend. Como Desarrollador busco crear proyectos que brinden la mejor experiencia para el usuario.",
+          style: TextStyle(fontSize: 18, color: Colors.white70, height: 1.5),
+        ),
       ),
       SizedBox(height: 12),
       Text(

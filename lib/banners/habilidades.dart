@@ -12,7 +12,7 @@ class _HabilidadesBannerState extends State<HabilidadesBanner> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     // Ancho de pantalla
-    bool isMobile = width < 600 ? true : false;
+    bool isMobile = width < 850 ? true : false;
     return isMobile ? habilidadesMob() : habilidadesDesk();
   }
 

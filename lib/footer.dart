@@ -12,7 +12,7 @@ class _FooterState extends State<Footer> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     // Ancho de pantalla
-    bool isMobile = width < 600 ? true : false;
+    bool isMobile = width < 850 ? true : false;
     return isMobile ? footerMob() : footerDesk();
   }
 }

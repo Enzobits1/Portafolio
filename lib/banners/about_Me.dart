@@ -12,14 +12,14 @@ class _AboutmeBannerState extends State<AboutmeBanner> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     // Ancho de pantalla
-    bool isMobile = width < 600 ? true : false;
+    bool isMobile = width < 850 ? true : false;
     return isMobile ? aboutMeMob() : aboutMeDesk();
   }
 }
 
 Widget aboutMeDesk() {
   return Container(
-    height: 500,
+    height: 650,
     color: const Color.fromARGB(255, 20, 20, 20),
     padding: const EdgeInsets.symmetric(horizontal: 60),
     child: Row(

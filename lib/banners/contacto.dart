@@ -12,7 +12,7 @@ class _ContactobannerState extends State<Contactobanner> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    bool isMobile = width < 600;
+    bool isMobile = width < 850;
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 20),

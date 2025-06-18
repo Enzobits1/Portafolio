@@ -13,7 +13,7 @@ class _PortadaBannerState extends State<PortadaBanner> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     // Ancho de pantalla
-    bool isMobile = width < 600 ? true : false;
+    bool isMobile = width < 850 ? true : false;
     return isMobile ? portadaMob() : portadaDesk();
   }
 }
@@ -73,9 +73,8 @@ SizedBox portadaDesk() {
       color: const Color.fromARGB(87, 0, 0, 0),
       child: Row(
         children: [
-          // Parte izquierda: Presentación
           Expanded(
-            flex: 1,
+            flex: 70,
             child: SizedBox(
               width: 450,
               child: Column(

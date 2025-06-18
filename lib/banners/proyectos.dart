@@ -13,7 +13,7 @@ class _ProyectosBannerState extends State<ProyectosBanner> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     // Ancho de pantalla
-    bool isMobile = width < 600 ? true : false;
+    bool isMobile = width < 850 ? true : false;
 
     return isMobile ? proyectMob() : proyectDesk();
   }
@@ -21,7 +21,7 @@ class _ProyectosBannerState extends State<ProyectosBanner> {
 
 Container proyectDesk() {
   return Container(
-    height: 500,
+    height: 900,
     color: const Color.fromARGB(87, 0, 0, 0),
     width: double.infinity,
     child: Column(
@@ -29,27 +29,33 @@ Container proyectDesk() {
         SizedBox(height: 20),
         Text("Proyectos", style: TextStyle(fontSize: 32, color: Colors.white)),
         SizedBox(height: 16),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        Column(
+          spacing: 1,
+
           children: [
-            Expanded(
-              flex: 1,
-              child: projectDesk(
-                "Portafolio",
-                "assets/portafolio_web.png",
-                "https://portafolio-enzo.vercel.app/",
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: projectDesk(
+                    "Portafolio",
+                    "assets/portafolio_web.png",
+                    "https://portafolio-enzo.vercel.app/",
+                  ),
+                ),
+                SizedBox(width: 16),
+                Expanded(
+                  flex: 1,
+                  child: projectDesk(
+                    "Trabajo Prac. Pizzas",
+                    "assets/pizzas_web.png",
+                    "https://pizzas-web.vercel.app/",
+                  ),
+                ),
+                SizedBox(width: 16),
+              ],
             ),
-            SizedBox(width: 16),
-            Expanded(
-              flex: 1,
-              child: projectDesk(
-                "Trabajo Prac. Pizzas",
-                "assets/pizzas_web.png",
-                "https://pizzas-web.vercel.app/",
-              ),
-            ),
-            SizedBox(width: 16),
           ],
         ),
       ],

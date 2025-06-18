@@ -40,7 +40,7 @@ Container proyectDesk() {
                   flex: 1,
                   child: projectDesk(
                     "Portafolio",
-                    "assets/portafolio_web.png",
+                    "assets/Portafolio_web.png",
                     "https://portafolio-enzo.vercel.app/",
                   ),
                 ),

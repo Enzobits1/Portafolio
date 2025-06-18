@@ -25,20 +25,22 @@ Widget aboutMeDesk() {
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        // Imagen ilustrativa
-        Expanded(
-          flex: 1,
-          child: Image.asset("assets/imagen_sin_fondo.png", scale: 2.0),
+        Container(
+          width: 400,
+          padding: EdgeInsets.all(16),
+          child: Image.asset(
+            "assets/imagen_sin_fondo.png",
+            scale: 1.5,
+            fit: BoxFit.contain,
+          ),
         ),
         SizedBox(width: 60),
-        // Texto
         Expanded(
           flex: 2,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Este queda exactamente como lo tenías
               Text(
                 "Sobre mí",
                 style: TextStyle(fontSize: 32, color: Colors.white),

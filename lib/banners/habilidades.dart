@@ -34,22 +34,22 @@ class _HabilidadesBannerState extends State<HabilidadesBanner> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                itemHabilidades("assets/c++.png", "C++"),
+                itemDesk("assets/c++.png", "C++"),
                 SizedBox(width: 120),
-                itemHabilidades("assets/canva.png", "Canva"),
+                itemDesk("assets/canva.png", "Canva"),
                 SizedBox(width: 120),
-                itemHabilidades("assets/flutter.png", "Flutter"),
+                itemDesk("assets/flutter.png", "Flutter"),
               ],
             ),
             SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                itemHabilidades("assets/git.png", "Git"),
+                itemDesk("assets/git.png", "Git"),
                 SizedBox(width: 120),
-                itemHabilidades("assets/github.png", "Github"),
+                itemDesk("assets/github.png", "Github"),
                 SizedBox(width: 120),
-                itemHabilidades("assets/dart.png", "Dart"),
+                itemDesk("assets/dart.png", "Dart"),
               ],
             ),
           ],
@@ -58,30 +58,33 @@ class _HabilidadesBannerState extends State<HabilidadesBanner> {
     ),
   );
 
-  Container itemHabilidades(String imagen, String texto) {
-    return Container(
-      height: 150,
+  Widget itemDesk(String path, String label) {
+    return SizedBox(
       width: 150,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.elliptical(150, 150)),
-        border: Border.all(color: const Color.fromARGB(153, 255, 242, 242)),
+      child: Column(
+        children: [
+          Container(
+            width: 160,
+            height: 160,
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: Color(0xFF1E293B),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Image.asset(path),
+          ),
+          SizedBox(height: 8),
+          Text(label, style: const TextStyle(color: Colors.white)),
+        ],
       ),
-      child: Image.asset(imagen),
     );
   }
 
   Column habilidadesMob() => Column(
     children: [
-      const SizedBox(height: 30),
-      const Text(
-        'Habilidades',
-        style: TextStyle(
-          fontSize: 28,
-          fontWeight: FontWeight.bold,
-          color: Colors.white,
-        ),
-      ),
-      const SizedBox(height: 20),
+      SizedBox(height: 30),
+      Text('Habilidades', style: TextStyle(fontSize: 28, color: Colors.white)),
+      SizedBox(height: 20),
       Wrap(
         spacing: 20,
         runSpacing: 20,
@@ -105,8 +108,8 @@ Widget itemMob(String path, String label) {
     child: Column(
       children: [
         Container(
-          width: 60,
-          height: 60,
+          width: 80,
+          height: 80,
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             color: Color(0xFF1E293B),

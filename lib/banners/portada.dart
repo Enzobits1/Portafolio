@@ -20,7 +20,7 @@ class _PortadaBannerState extends State<PortadaBanner> {
 
 SizedBox portadaMob() {
   return SizedBox(
-    height: 500,
+    height: 700,
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -68,7 +68,7 @@ SizedBox portadaMob() {
 
 SizedBox portadaDesk() {
   return SizedBox(
-    height: 500,
+    height: 900,
     child: Container(
       color: const Color.fromARGB(87, 0, 0, 0),
       child: Row(
@@ -112,43 +112,59 @@ SizedBox portadaDesk() {
                   SizedBox(height: 20),
                   Row(
                     children: [
-                      ElevatedButton(
-                        onPressed: () {
-                          // Lógica para descargar CV
+                      OutlinedButton(
+                        onPressed: () async {
+                          final url =
+                              'https://drive.google.com/file/d/1IyDEe7h7aK8jW57DYJXrkEUOhz0cKaUw/view';
+                          if (await canLaunchUrl(Uri.parse(url))) {
+                            await launchUrl(
+                              Uri.parse(url),
+                              mode: LaunchMode.externalApplication,
+                            );
+                          } else {
+                            throw 'No se pudo abrir el CV';
+                          }
                         },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey[800],
+                        style: OutlinedButton.styleFrom(
+                          side: BorderSide(color: Colors.white70),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(40),
+                          ),
                           padding: EdgeInsets.symmetric(
                             horizontal: 20,
                             vertical: 12,
                           ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(40),
-                          ),
                         ),
                         child: Text(
-                          "DESCARGAR CV",
-                          style: TextStyle(fontSize: 14, color: Colors.white),
+                          "Descargar CV",
+                          style: TextStyle(fontSize: 20, color: Colors.white70),
                         ),
                       ),
                       SizedBox(width: 16),
-                      ElevatedButton(
-                        onPressed: () {
-                          // Lógica para abrir enlace de contacto
+                      OutlinedButton(
+                        onPressed: () async {
+                          final url =
+                              ""; //CREAR ANIMACION PARA DESLIZAR A LA SECCIÓN CONTACTO- PENDIENTE
+                          if (await canLaunchUrl(Uri.parse(url))) {
+                            await launchUrl(
+                              Uri.parse(url),
+                              mode: LaunchMode.externalApplication,
+                            );
+                          }
                         },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromARGB(150, 160, 100, 80),
+                        style: OutlinedButton.styleFrom(
+                          side: BorderSide(color: Colors.white70),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(40),
+                          ),
                           padding: EdgeInsets.symmetric(
                             horizontal: 20,
                             vertical: 12,
                           ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(40),
-                          ),
                         ),
                         child: Text(
-                          "CONTACTO",
-                          style: TextStyle(fontSize: 14, color: Colors.white),
+                          "Contacto",
+                          style: TextStyle(fontSize: 20, color: Colors.white70),
                         ),
                       ),
                     ],

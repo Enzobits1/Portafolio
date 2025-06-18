@@ -32,9 +32,23 @@ Container proyectDesk() {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Expanded(flex: 1, child: sizeProyectDesk("assets/pizzas_web.png")),
+            Expanded(
+              flex: 1,
+              child: projectDesk(
+                "Portafolio",
+                "assets/portafolio_web.png",
+                "https://portafolio-enzo.vercel.app/",
+              ),
+            ),
             SizedBox(width: 16),
-            Expanded(flex: 1, child: sizeProyectDesk("assets/pizzas_web.png")),
+            Expanded(
+              flex: 1,
+              child: projectDesk(
+                "Trabajo Prac. Pizzas",
+                "assets/pizzas_web.png",
+                "https://pizzas-web.vercel.app/",
+              ),
+            ),
             SizedBox(width: 16),
           ],
         ),
@@ -43,38 +57,54 @@ Container proyectDesk() {
   );
 }
 
-Container sizeProyectDesk(String imagen) {
-  return Container(
-    width: 150,
-    height: 150,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(30), //ajusta el radio del proyecto
-      border: Border.all(color: Colors.white), //
+Widget projectDesk(String title, String imagePath, String url) {
+  return InkWell(
+    onTap: () async {
+      if (await canLaunchUrl(Uri.parse(url))) {
+        launchUrl(Uri.parse(url));
+      }
+    },
+    child: Container(
+      width: double.infinity,
+      margin: EdgeInsets.symmetric(horizontal: 20),
+      decoration: BoxDecoration(
+        color: Color(0xFF1E293B),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Column(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+            child: Image.asset(imagePath),
+          ),
+          Padding(
+            padding: EdgeInsets.all(12),
+            child: Text(
+              title,
+              style: TextStyle(color: Colors.white, fontSize: 22),
+            ),
+          ),
+        ],
+      ),
     ),
-    child: Image.asset(imagen),
   );
 }
+
 //termina escritorio
 
 Column proyectMob() {
   return Column(
     children: [
-       SizedBox(height: 30),
-       Text(
-        'Proyectos',
-        style: TextStyle(
-          fontSize: 28,
-          color: Colors.white,
-        ),
-      ),
-       SizedBox(height: 20),
-      projectItem(
+      SizedBox(height: 30),
+      Text('Proyectos', style: TextStyle(fontSize: 28, color: Colors.white)),
+      SizedBox(height: 20),
+      projectDesk(
         "Portafolio",
         "assets/portafolio_web.png",
-        "https://portafolio-iota-seven-83.vercel.app/",
+        "https://portafolio-enzo.vercel.app/",
       ),
       const SizedBox(height: 20),
-      projectItem(
+      projectDesk(
         "Web Pizza",
         "assets/pizzas_web.png",
         "https://pizzas-web.vercel.app/",

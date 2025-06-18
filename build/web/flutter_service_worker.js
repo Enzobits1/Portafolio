@@ -3,9 +3,9 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "962a5729dfa3c5a5cb30f7b8994c7df9",
-"assets/AssetManifest.bin.json": "bf13f7647e510dd4ccd876aafcd9868b",
-"assets/AssetManifest.json": "fdb3fc9bf202b6efbc8d0d10d8ea3897",
+const RESOURCES = {"assets/AssetManifest.bin": "31cb3ddd5b4289d5d203132dd0cdcfcd",
+"assets/AssetManifest.bin.json": "ae1a942a65a271a03377dfa72f8ceca1",
+"assets/AssetManifest.json": "61badf675e929803f189c1f5667a6567",
 "assets/assets/c++.png": "4de88bdebdcbdcec7cd0600d9610df5c",
 "assets/assets/dart.png": "6dfecd3d853795cde41dfd8990a22983",
 "assets/assets/developer_logo.png": "5950479853cc7c1ede22585bd1cbe67b",
@@ -17,7 +17,6 @@ const RESOURCES = {"assets/AssetManifest.bin": "962a5729dfa3c5a5cb30f7b8994c7df9
 "assets/assets/linkedin.png": "f59d016ad129b5037db047fac8ce0615",
 "assets/assets/notion.png": "e722eef8aeb3acdb11de96e19f53af49",
 "assets/assets/pizzas_web.png": "900c12f09018dc5bd059b34c8d0ff476",
-"assets/assets/Portafolio_web.png": "bee1d745519b7bd76ba641b258b52b5f",
 "assets/assets/puntos.png": "2fa5f758f9b6618ab7952b140a1291d8",
 "assets/assets/telefono_sin_f.png": "7dd97c0b33dd7c939c64e0281be39ab2",
 "assets/assets/wsp-logo-64px.webp": "09d3b6aa0a8b0f15812c50d5784df04d",
@@ -37,7 +36,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "962a5729dfa3c5a5cb30f7b8994c7df9
 "canvaskit/skwasm.wasm": "39dd80367a4e71582d234948adc521c0",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "83d881c1dbb6d6bcd6b42e274605b69c",
-"flutter_bootstrap.js": "38131d756b22ee296df3d03b4d7fc59d",
+"flutter_bootstrap.js": "3ce263a2fac388a45f600755d58d3436",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
